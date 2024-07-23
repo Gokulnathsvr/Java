@@ -1,6 +1,6 @@
 package Trees;
 
-public class InOrder {
+public class PostOrder_Tree {
     public static class Node{
         int data;
         Node left;
@@ -11,14 +11,13 @@ public class InOrder {
             this.right=null;
         }
     }
-    public static void inorder(Node root){
+    public static void postorder(Node root){
         if(root==null){
             return;
         }
-
-        inorder(root.left);
+        postorder(root.left);
+        postorder(root.right);
         System.out.print(root.data+"");
-        inorder(root.right);
         return;
     }
 
@@ -30,8 +29,7 @@ public class InOrder {
         root.left.right=new Node(5);
         root.right.left=new Node(6);
         root.right.right=new Node(7);
-        inorder(root);
+        postorder(root);
 
     }
 }
-

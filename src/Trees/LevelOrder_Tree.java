@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-public class levelorder {
+public class LevelOrder_Tree {
 
     public static class Node {
         public int data;
